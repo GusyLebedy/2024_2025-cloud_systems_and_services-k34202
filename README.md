@@ -17,4 +17,4 @@
 
 1. Арефьев Дмитрий
 2. [Гусевская Арина](https://github.com/GusyLebedy)
-3. Исламов Сергей
+3. [Исламов Сергей](https://github.com/16Angeles)
