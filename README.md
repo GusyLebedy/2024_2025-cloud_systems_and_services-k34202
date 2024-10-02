@@ -15,6 +15,6 @@
 
 ![team](/img/main.gif)
 
-1. Арефьев Дмитрий
+1. [Арефьев Дмитрий](https://github.com/Persiwall)
 2. [Гусевская Арина](https://github.com/GusyLebedy)
 3. [Исламов Сергей](https://github.com/16Angeles)
