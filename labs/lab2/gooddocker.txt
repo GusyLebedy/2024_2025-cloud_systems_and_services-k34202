@@ -1,0 +1,12 @@
+FROM python:3.9
+
+
+RUN apt-get update && apt-get install -y build-essential \
+	&& rm -rf /var/lib/apt/lists/* \	
+    && pip install flask
+
+COPY app.py /app/app.py
+
+WORKDIR /app
+
+CMD ["python", "app.py"]
