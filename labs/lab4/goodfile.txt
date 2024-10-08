@@ -1,0 +1,43 @@
+stages:
+  - build
+  - test
+  - deploy
+
+variables:
+  TEST_ENV: "dev"
+  DEPLOY_ENV: "production"
+  DEPLOY_SERVER: "user@production-server"
+  BUILD_ARTIFACTS_PATH: "build"
+
+build:
+  stage: build
+  script:
+    - echo "Building the app..."
+    - npm ci
+    - npm run build
+  artifacts:
+    paths:
+      - $BUILD_ARTIFACTS_PATH
+  only:
+    - main
+    - dev
+
+test:
+  stage: test
+  script:
+    - echo "Running tests..."
+    - npm test
+  only:
+    - main
+    - dev
+
+deploy:
+  stage: deploy
+  script:
+    - echo "Deploying to $DEPLOY_ENV..."
+    - scp -r ./$BUILD_ARTIFACTS_PATH $DEPLOY_SERVER:/var/www/html
+  only:
+    - main
+  environment:
+    name: production
+  when: manual
