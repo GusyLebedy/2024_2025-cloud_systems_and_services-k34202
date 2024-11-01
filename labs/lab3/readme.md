@@ -14,12 +14,12 @@
    
 ![Minikube](img/minikube.jpg)
 
-3. Проверим наличие Docker.
+3. Проверим наличие и версию Docker.
 
 ![Docker](img/docker.jpg)
-### Создание сертификатов
+### Создание кластера
 
-1. Создадим локальный кластер Kubernetes.
+1. Запустим кластер с помощью драйвера Docker.
 
 ![Kuber](img/kuber.jpg)
 
@@ -31,5 +31,6 @@
 
 
 ### Не хочется потерять эти материалы по теме:
-1. [Kubernetes](https://habr.com/ru/companies/otus/articles/666700/](https://kubernetes.io/ru/docs/concepts/overview/components/)
+
+1. [Kubernetes](https://kubernetes.io/ru/docs/concepts/overview/components/)
 2. [Работа в Kubernetes с помощью Minikube](https://selectel.ru/blog/tutorials/how-to-run-kubernetes-with-minikube/)
