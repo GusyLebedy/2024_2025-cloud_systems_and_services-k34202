@@ -4,7 +4,7 @@
 (сервис любой из своих не опенсорсных, вывод “hello world” в браузер тоже подойдёт)
 
 ## Ход работы
-### Подгоьовка среды
+### Подгоnовка среды
 Работа будет выполнена на OS Linux.
 1. Установим kubectl (утилита для работы с Kubernetes, которая взаимодействует с кластером через его API).
 
@@ -23,6 +23,17 @@
 
 ![Kuber](img/kuber.jpg)
 
+2. Добавим в файл hosts новую запись, чтобы связать домен hello-world.local с айпи Minikube
+
+<img src="img/hosts.png" width="500">
+
+3. Создадим объект Kubernetes из файла deployment.yaml с помощью команды ```kubectl apply -f deployment.yaml```. Отобразим список деплойментов в кластере Kubernetes командой ```kubectl get deployments```. 
+
+<img src="img/apply.jpg" width="500">
+
+4. Узнаем адрес, на котором запущен сервис
+
+<img src="img/ip.jpg" width="500">
 
 ### 
 
