@@ -15,13 +15,27 @@ kubectl create namespace monitoring
 <img src="img/namespace.jpeg" width="500">
 
 2. Установим PostgreSQL с использованием Helm (менеджер пакетов).
-
 ```
 helm install my-postgresql oci://registry-1.docker.io/bitnamicharts/postgresql --namespace monitoring
 ```
-В ссылке на пакет PostgreSQL из репозитория Bitnami видим чарты. <b>Чарты</b> – это пакеты, которые могут включать в себя все для запуска приложения в Kubernetes, от deployments до services. Все это дает возможность работать с приложениями как с единой сущностью, а не как с набором отдельных ресурсов, которые еще и в ручную нужно настраивать
+В ссылке на пакет PostgreSQL из репозитория Bitnami видим чарты. <b>Чарты</b> – это пакеты, которые могут включать в себя все для запуска приложения в Kubernetes, от deployments до services. Все это дает возможность работать с приложениями как с единой сущностью, а не как с набором отдельных ресурсов, которые еще и в ручную нужно настраивать.
 
+3. Обновим конфигурацию PostgreSQL.
+```
+helm upgrade -f postgresql/values.yaml my-postgresql oci://registry-1.docker.io/bitnamicharts/postgresql --namespace monitoring
+```
+4. Установим Prometheus. <b>Prometheus</b> — система мониторинга серверов и программ с открытым исходным кодом.
+```
+helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+helm install my-prometheus prometheus-community/prometheus --namespace monitoring
+```
 
+5. Установим Grafana. <b>Grafana</b> — это платформа с открытым исходным кодом для визуализации, мониторинга и анализа данных.
+```
+helm repo add grafana https://grafana.github.io/helm-charts
+helm install my-grafana grafana/grafana --namespace monitoring
+```
+> Дальше душа стала требовать большого светлого ~~нефильтрованного~~. И мы решили стать кротами на работе у Серёжи.
 
 ### Не хочется потерять эти материалы по теме:
 1. [Основы мониторинга (обзор Prometheus и Grafana)](https://habr.com/ru/articles/709204/)
