@@ -50,6 +50,9 @@ helm install my-grafana grafana/grafana --namespace monitoring
 <img src="img/setting.jpg" width="500">
 
 3. Посмотрим настройку панели Grafana для мониторинга активных сессий базы данных PostgreSQL.
+
+<img src="img/details.jpg" width="500">
+
 Разберемся с конфигурацией:
 
 <b>Datasource</b> указывает на источник данных. В нашем случае установлено использование метрик, собранных Prometheus.
