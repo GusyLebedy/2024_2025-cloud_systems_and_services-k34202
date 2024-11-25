@@ -14,6 +14,6 @@
   <img src="img/31.png" align="center">
 </p>
 
-2. Далее командой    helm create hello-world    создадим шаблон helm chart (структуру директории с шаблонами файлов)
+2. Далее командой ```helm create hello-world``` создадим шаблон helm chart (структуру директории с шаблонами файлов)
 
 3.
