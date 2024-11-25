@@ -1,0 +1,19 @@
+replicaCount: 1
+
+image:
+  repository: nginx
+  tag: alpine
+  pullPolicy: IfNotPresent
+
+service:
+  type: NodePort
+  port: 80
+  targetPort: 80
+  nodePort: 30008
+
+configMap:
+  indexHtml: |
+    <html>
+    <head><title>Hello World 2</title></head>
+    <body><h1>Hello World 2</h1></body>
+    </html>
