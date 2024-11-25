@@ -10,4 +10,6 @@
 ### Создание helm chart-а
 
 Для начала установим helm и проверим корректность установки
-<img src="img/31.png" align="center">
+<p align="center">
+  <img src="img/31.png" align="center">
+</p>
