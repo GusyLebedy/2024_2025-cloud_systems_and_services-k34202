@@ -103,7 +103,7 @@ spec:
             name: {{ include "hello-world.fullname" . }}-config
 ```
 
-Файл описывает развертывание приложения в Kubernetes. В начале указывается тип объекта Kubernetes, имя deployment создается, как и в configMap, через шаблон ```hello-world.fullname```. Количество реплик берётся из файла values.yaml строкой ```{{ .Values.replicaCount }}```. Селектор связывает Deployment с подами на основе метки app (```selector: matchLabels: app:```). Шаблон пода включает в себя метки для связи с Deployment. Далее в ```spec:``` описываются настройки контейнера: его имя, образ (собирается из репозитория и тега из values.yaml) и политика загрузки образа). Далее ```volumeMounts``` монтирует volume (в данном случае ConfigMap) в контейнер, и ```volumes:``` определяет volume использующий ConfigMap
+Файл описывает развертывание приложения в Kubernetes. В начале указывается тип объекта Kubernetes, имя deployment создается, как и в configMap, через шаблон ```hello-world.fullname```. Количество реплик берётся из файла values.yaml строкой ```{{ .Values.replicaCount }}```. Селектор связывает Deployment с подами на основе метки app (```selector: matchLabels: app:```). Шаблон пода включает в себя метки для связи с Deployment. Далее в ```spec:``` описываются настройки контейнера: его имя, образ (собирается из репозитория и тега из values.yaml) и политика загрузки образа). Далее ```volumeMounts``` монтирует volume (в данном случае ConfigMap) в контейнер, и ```volumes:``` определяет volume, использующий ConfigMap
 
 _helpers.tpl
 
