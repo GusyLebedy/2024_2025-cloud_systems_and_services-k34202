@@ -63,7 +63,7 @@
 Рекомендация: Добавить заголовок:
 ```Strict-Transport-Security: max-age=31536000; includeSubDomains; preload```
 
-![alt text](nikto.jpg)
+![alt text](img/nikto.jpg)
 
 ### На этом попытки взлома закончились, ровно как и бесплатный тариф ngrok. 
 
