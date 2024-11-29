@@ -13,7 +13,7 @@
 > Работа будет выполнена с помощью ngrok. 
 
 ### Установка Ngrok
-1. Установим nginx с помощью команды ```brew install ngrok```.
+1. Установим ngrok с помощью команды ```brew install ngrok```.
 
 <img src="" width="500">
 
